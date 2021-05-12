@@ -18,14 +18,20 @@
   position: fixed;
   width: 100%;
   padding: 15px;
-  background: blueviolet;
+  background-color: black;
   font-family: "Ubuntu", sans-serif;
+  transition: all 0.3s ease;
+}
+.navbar.sticky {
+  padding: 15px;
+  background: crimson;
 }
 .navbar .max-width {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .navbar .logo a {
   color: #fff;
   font-size: 35px;
@@ -35,9 +41,77 @@
   list-style: none;
   display: inline-block;
 }
+
 .navbar .menu li a {
   color: #fff;
   font-size: 18px;
   font-weight: 500;
   margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: purple;
+}
+/*menu btn styling*/
+.menubtn {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+/*home section styiling*/
+.home {
+  display: flex;
+  background: url(images/homeB.jpg) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  min-height: 500px;
+}
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
+.home .home-content .text-1 {
+  font-size: 80px;
+  font-weight: 500;
+  padding: auto;
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.home .home-content .text-2 {
+  font-size: 120px;
+  font-weight: 500;
+  color: crimson;
+  margin-left: -3px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.home .home-content .text-3 {
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  margin: 5px 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+/*responcive media*/
+@media (max-width: 991px) {
+  .max-width {
+    padding: 0 50px;
+  }
+  .navbar .menu {
+    text-align: center;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: 0%;
+    top: 0;
+    background: #111;
+  }
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
 }
