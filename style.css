@@ -204,6 +204,16 @@ section {
 }
 
 .help .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.help .about-content .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: cyan;
 }
 
 /*responcive media*/
